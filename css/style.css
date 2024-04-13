@@ -267,6 +267,7 @@ a:hover {
 
 
 
+
 .card-text p {
   max-width: 100%; 
   word-wrap: break-word;
@@ -339,7 +340,8 @@ a:hover {
   max-height: 100%;
   overflow: hidden;
   transition: overflow 0.3s ease;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+   
 }
 
 .info:hover {
@@ -426,18 +428,29 @@ a:hover {
   }
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 @media (max-width: 767px) {
-  body {
-    font-size: 14px; 
-  }
+
 
   h1 {
     font-size: 1.6rem; 
   }
 
   h2 {
-    font-size: 1.3rem; 
+    font-size: 1.6rem; 
   }
+
+  p {
+    font-size: 1.1rem;
+  }
+  .custom-article {
+    text-align: center; /* Centrar el contenido del artículo */
+  }
+
+  
 }
 
 #videoElement {
@@ -455,11 +468,14 @@ margin-bottom: 75px;
 
 @media only screen and (max-width: 768px) {
   #videoElement {
-    border-radius: 15px;
-    padding: 10px;
-
+    border-radius: 0; /* Eliminar la propiedad de borde redondeado */
+    width: 100%; /* Asegurarse de que el video ocupe todo el ancho del contenedor */
+    height: auto;
   }
 }
+
+
+
 
 
 @media only screen and (max-width: 768px) {

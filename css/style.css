@@ -429,18 +429,18 @@ a:hover {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 767px) {
 
 
   h1 {
-    font-size: 1.6rem; 
+    font-size: 1.5rem; 
   }
 
   h2 {
-    font-size: 1.6rem; 
+    font-size: 1.2rem; 
   }
 
   p {
@@ -452,6 +452,7 @@ p {
 
   
 }
+
 
 #videoElement {
   border-radius: 80px;
@@ -510,6 +511,12 @@ margin-bottom: 75px;
   }
 }
 
+@media (max-width: 767px) {
+  .card {
+    min-height: 300px; /* Ajusta la altura mínima según lo que necesites */
+    overflow: visible; /* Asegura que el contenido se muestre completo sin barras de desplazamiento */
+  }
+}
 @media (max-width: 767px) {
   .navbar-brand img {
     max-width: 150px;

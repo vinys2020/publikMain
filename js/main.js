@@ -222,3 +222,25 @@ function limpiarFormulario() {
   document.getElementById('servicio').value = 'En que puedo ayudarte?';
   document.getElementById('mensaje').value = '';
 }
+
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando mensaje...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_dbkw209';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Mensaje enviado correctamente';
+      alert('Mensaje Enviado!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});

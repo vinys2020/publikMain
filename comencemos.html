@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Comenzar | Publik</title>
+    
     <script type="text/javascript"
      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -40,7 +41,7 @@
 
   <body style="background-color: black;">
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black" id="myNavbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="img/zyro-image.png" alt="Publica isologotipo" />
@@ -283,7 +284,6 @@
 
           </article>
 
-          
           
           
           
@@ -909,6 +909,28 @@
       </div>
 
     </footer>
+    <script>
+      const navbar = document.getElementById('myNavbar');
+      let lastScrollY = window.scrollY;
+    
+      navbar.style.transition = 'top 0.4s ease-in-out';
+    
+      // Detectar desplazamiento con la rueda del ratón
+      window.addEventListener('wheel', function(event) {
+        const currentScrollY = window.scrollY;
+    
+        if (event.deltaY > 0) {
+          // Desplazamiento hacia abajo
+          navbar.style.top = "-110px";  // Ajusta el valor según la altura de tu navbar
+        } else {
+          // Desplazamiento hacia arriba
+          navbar.style.top = "0";  // Muestra la barra de navegación
+        }
+    
+        // Actualiza la posición del scroll para la siguiente comparación
+        lastScrollY = currentScrollY;
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script

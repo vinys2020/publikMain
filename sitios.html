@@ -1352,58 +1352,23 @@
     <script>
       const navbar = document.getElementById("myNavbar");
       let lastScrollY = window.scrollY;
-    
-      navbar.style.transition = "top 0.4s ease-in-out"; // Suavizar la transición de la barra
-    
-      // Función común para manejar el desplazamiento
-      function handleScroll(currentScrollY) {
-        if (currentScrollY > lastScrollY) {
-          // Desplazamiento hacia abajo
-          navbar.style.top = "-110px"; // Ajusta este valor según la altura de tu navbar
-        } else {
-          // Desplazamiento hacia arriba
-          navbar.style.top = "0"; // Muestra la barra de navegación
-        }
-    
-        // Actualiza la posición del scroll para la siguiente comparación
-        lastScrollY = currentScrollY;
-      }
-    
-      // Detectar desplazamiento con la rueda del ratón (para computadoras)
+
+      navbar.style.transition = "top 0.4s ease-in-out";
+
+      // Detectar desplazamiento con la rueda del ratón
       window.addEventListener("wheel", function (event) {
         const currentScrollY = window.scrollY;
-    
+
         if (event.deltaY > 0) {
           // Desplazamiento hacia abajo
-          navbar.style.top = "-110px"; // Desplazamos la navbar hacia arriba (ocultándola)
+          navbar.style.top = "-110px"; // Ajusta el valor según la altura de tu navbar
         } else {
           // Desplazamiento hacia arriba
-          navbar.style.top = "0"; // Muestra la navbar
-        }
-    
-        // Actualiza la posición del scroll
-        lastScrollY = currentScrollY;
-      });
-    
-      // Detectar desplazamiento en dispositivos móviles (deslizar hacia arriba/abajo)
-      let touchStartY = 0;
-      window.addEventListener("touchstart", function (event) {
-        touchStartY = event.touches[0].pageY; // Guarda la posición inicial del toque
-      });
-    
-      window.addEventListener("touchmove", function (event) {
-        const touchEndY = event.touches[0].pageY; // Obtiene la posición del toque mientras se mueve
-    
-        if (touchStartY > touchEndY) {
-          // Desplazamiento hacia arriba (el usuario desliza hacia arriba)
           navbar.style.top = "0"; // Muestra la barra de navegación
-        } else {
-          // Desplazamiento hacia abajo (el usuario desliza hacia abajo)
-          navbar.style.top = "-110px"; // Oculta la barra de navegación
         }
-    
-        // Actualiza la posición inicial para la siguiente comparación
-        touchStartY = touchEndY;
+
+        // Actualiza la posición del scroll para la siguiente comparación
+        lastScrollY = currentScrollY;
       });
     </script>
 

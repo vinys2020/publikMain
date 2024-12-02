@@ -567,6 +567,14 @@ section.img img {
   animation-range: entry 10% cover 15%;
 }
 
+section.img img:nth-child(1) {
+  animation: none !important; /* Deshabilita la animación con prioridad */
+}
+
+section.img img:nth-child(26) {
+  animation: none !important; /* Deshabilita la animación con prioridad */
+}
+
 @keyframes reveal {
   from {
       opacity: 0;

@@ -64,10 +64,10 @@ var swiper = new Swiper('.mySwiper', {
 var swiper1 = new Swiper('.mySwiper2', {
   slidesPerView: 3,
   spaceBetween: 5,
-  loop: true, 
+  loop: true,  // Activar el bucle
   autoplay: {
-    delay: 1000, // swipers de colaboraciones 
-    disableOnInteraction: false, 
+    delay: 1000, // Intervalo entre diapositivas
+    disableOnInteraction: false, // El autoplay no se detendrá después de la interacción
   },
   pagination: {
     el: '.swiper-pagination',
@@ -84,7 +84,9 @@ var swiper1 = new Swiper('.mySwiper2', {
       slidesPerView: 1,
     },
     320: {
-      slidesPerView: 1,
+      slidesPerView: 2,
+      spaceBetween: 15,
+
     },
     768: {
       slidesPerView: 3,
@@ -94,8 +96,14 @@ var swiper1 = new Swiper('.mySwiper2', {
       slidesPerView: 5,
       spaceBetween: 20,
     },
+    1400: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
   },
 });
+
+
 
 var swiper2 = new Swiper('.mySwiper3', {
   slidesPerView: 3,

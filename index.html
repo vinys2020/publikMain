@@ -221,7 +221,7 @@
               <b><div id="wordContainer" class="word-animation"></div></b>
             </div>
 
-            <p class="slide-up">
+            <p class="slide-up mt-0">
               Ofrecemos servicios digitales para que tu negocio se destaque en el mundo digital. 
               Con soluciones a medida y estrategias personalizadas, 
               trabajamos para potenciar tu presencia en línea y alcanzar tus objetivos comerciales.
@@ -242,7 +242,7 @@
           <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const wordContainer = document.getElementById('wordContainer');
-                const words = ['Diseño Gráfico', 'Producción Audiovisual', 'Fotografía Profesional', 'Marketing Digital', 'Gestión de Marcas', 'Desarrollo Web', 'Aplicaciones Moviles', 'Desarrollo de Softwar'];
+                const words = ['','Diseño Gráfico', 'Producción Audiovisual', 'Fotografía Profesional', 'Marketing Digital', 'Gestión de Marcas', 'Desarrollo Web', 'Aplicaciones Moviles', 'Desarrollo de Softwar'];
       
                 function animateWords() {
                     let index = 0;
@@ -256,11 +256,11 @@
                             charIndex++;
       
                             if (charIndex <= currentWord.length) {
-                                setTimeout(typeEffect, 50); // Ajusta la velocidad de escritura
+                                setTimeout(typeEffect, 80); // Ajusta la velocidad de escritura
                             } else {
                                 setTimeout(() => {
                                     eraseEffect();
-                                }, 2000); // Tiempo antes de comenzar a borrar
+                                }, 3000); // Tiempo antes de comenzar a borrar
                             }
                         }
       
@@ -269,12 +269,12 @@
                             charIndex--;
       
                             if (charIndex >= 0) {
-                                setTimeout(eraseEffect, 50); // Ajusta la velocidad de borrado
+                                setTimeout(eraseEffect, 80); // Ajusta la velocidad de borrado
                             } else {
                                 index = (index + 1) % words.length;
                                 setTimeout(() => {
                                     updateWord();
-                                }, 500); // Tiempo antes de comenzar a escribir la siguiente palabra
+                                }, 900); // Tiempo antes de comenzar a escribir la siguiente palabra
                             }
                         }
       
@@ -292,7 +292,7 @@
 
         <section id="servicios" class="row align-items-lg-center min-vh-100">
 
-          <article class="col-12 text-center slide-up" style="margin-top: 200px; margin-bottom: 100px;">
+          <article class="col-12 text-center slide-up" style="margin-top: 150px; margin-bottom: 10px;">
             <h1 style="color: rgb(255, 255, 255);"><i>Los mejores servicios para tu negocio</i></h1>
           </article>
 
@@ -300,12 +300,23 @@
 
             <div class="row ">
             
-              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up mb-3">
+              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up mb-0">
 
-                <div class="card-body mx-auto mb-3 mt-3 " style="width: 30rem;">
+                <div class="card-body mx-auto mb-0 mt-0 mt-md-3 " style="width: 30rem;">
                   <div class="card bg-white shadow-lg " style="width: 100%; padding: 5px;">
-                    <video src="img/publik (7).mp4" class="object-fit-contain lazy-load" style="width: 100%; border-radius: 15px; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
-                    <div class="card-body">
+                      <video 
+                        class="object-fit-contain lazy-load" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline 
+                        style="width: 100%; border-radius: 15px; height: 100%; object-fit: cover;" 
+                        preload="metadata">
+                        <source src="img/publik (7).mp4" type="video/mp4">
+                        <source src="img/publik (7).webm" type="video/webm">
+                        Tu navegador no soporta el video HTML5.
+                      </video>                    
+                      <div class="card-body">
                       <h5 class="card-title bi-text-paragraph" style="color: black;"><b>Contenido Publicitario</b></h5>
                       <p class="card-text" style="color: black;">
                         Creación de contenido publicitario para tu marca, Desarrollo de anuncios publicitarios enfocado en el mensaje que queremos transmitir
@@ -317,12 +328,23 @@
 
               </article>
           
-              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up mb-3 justify-content-around">
+              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up mb-0 justify-content-around">
 
-                <div class="card-body mx-auto mb-3 mt-3" style="width: 30rem;">
+                <div class="card-body mx-auto mb-0 mt-0 mt-md-3" style="width: 30rem;">
                   <div class="card bg-black shadow-lg " style="width: 100%; padding: 5px;">
-                    <video src="img/publik (6).mp4" class="object-fit-contain lazy-load" style="width: 100%; border-radius: 15px; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
-                    <div class="card-body">
+                      <video 
+                        class="object-fit-contain lazy-load" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline 
+                        style="width: 100%; border-radius: 15px; height: 100%; object-fit: cover;" 
+                        preload="metadata">
+                        <source src="img/publik (6).mp4" type="video/mp4">
+                        <source src="img/publik (6).webm" type="video/webm">
+                        Tu navegador no soporta el video HTML5.
+                      </video>                    
+                      <div class="card-body">
                       <h5 class="card-title bi-text-paragraph" style="color: rgb(255, 255, 255);"><b>Branding</b></h5>
                       <p class="card-text" style="color: white;">
                         Acciones relacionadas con el posicionamiento, el propósito y los valores de una marca. Desde la creación de logo hasta su despliegue
@@ -334,11 +356,22 @@
 
               </article>
 
-              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up mb-3">
+              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up mb-0">
 
-                <div class="card-body mx-auto mb-3 mt-3" style="width: 30rem;">
+                <div class="card-body mx-auto mb-0 mt-0 mt-md-3 mb-md-3" style="width: 30rem;">
                   <div class="card bg-black shadow-lg" style="width: 100%; padding: 5px;">
-                    <video src="img/publik (11).mp4" class="object-fit-contain lazy-load" style="width: 100%;border-radius: 15px; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video 
+                    class="object-fit-contain lazy-load" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline 
+                    style="width: 100%; border-radius: 15px; height: 100%; object-fit: cover;" 
+                    preload="metadata">
+                    <source src="img/publik (11).mp4" type="video/mp4">
+                    <source src="img/publik (11).webm" type="video/webm">
+                    Tu navegador no soporta el video HTML5.
+                    </video> 
                     <div class="card-body">
                       <h5 class="card-title bi-text-paragraph" style="color: rgb(255, 255, 255);"><b>Diseño Gráfico</b></h5>
                       <p class="card-text" style="color: white;">
@@ -351,11 +384,22 @@
 
               </article>
           
-              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up mb-3">
+              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up mb-0">
 
-                <div class="card-body mx-auto mb-3 mt-3" style="width: 30rem; ">
+                <div class="card-body mx-auto mb-0 mt-0 mt-md-3" style="width: 30rem; ">
                   <div class="card bg-white shadow-lg" style="width: 100%; padding: 5px;">
-                    <video src="img/publik (2).mp4" class="object-fit-contain lazy-load" style="width: 100%;border-radius: 15px; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video 
+                    class="object-fit-contain lazy-load" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline 
+                    style="width: 100%; border-radius: 15px; height: 100%; object-fit: cover;" 
+                    preload="metadata">
+                    <source src="img/publik (2).mp4" type="video/mp4">
+                    <source src="img/publik (2).webm" type="video/webm">
+                    Tu navegador no soporta el video HTML5.
+                    </video> 
                     <div class="card-body">
                       <h5 class="card-title bi-text-paragraph" style="color: black;"><b>Producción Audiovisual</b></h5>
                       <p class="card-text" style="color: black;">
@@ -369,11 +413,22 @@
               </article>
           
               
-              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up" style="margin-bottom: 10px;">
+              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up">
 
-                <div class="card-body mx-auto mb-3 mt-3" style="width: 30rem; ">
+                <div class="card-body mx-auto mb-0 mt-0 mt-md-3" style="width: 30rem; ">
                   <div class="card bg-white shadow-lg" style="width: 100%; padding: 5px;">
-                    <video src="img/publik (10).mp4" class="object-fit-contain lazy-load" style="width: 100%;border-radius: 15px; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video 
+                    class="object-fit-contain lazy-load" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline 
+                    style="width: 100%; border-radius: 15px; height: 100%; object-fit: cover;" 
+                    preload="metadata">
+                    <source src="img/publik (10).mp4" type="video/mp4">
+                    <source src="img/publik (10).webm" type="video/webm">
+                    Tu navegador no soporta el video HTML5.
+                    </video> 
                     <div class="card-body">
                       <h5 class="card-title bi-text-paragraph" style="color: black;"><b>Campañas Publicitarias</b></h5>
                       <p class="card-text" style="color: black;">
@@ -386,11 +441,22 @@
 
               </article>
           
-              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up" style="margin-bottom: 100px;">
+              <article class="col-12 col-md-12 col-lg-6 d-flex slide-up">
 
-                <div class="card-body mx-auto mb-3 mt-3" style="width: 30rem; ">
+                <div class="card-body mx-auto mb-3 mt-0 mt-md-3" style="width: 30rem; ">
                   <div class="card bg-black shadow-lg" style="width: 100%; padding: 5px;">
-                    <video src="img/publik (9).mp4" class="object-fit-contain lazy-load" style="width: 100%;border-radius: 15px; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video 
+                    class="object-fit-contain lazy-load" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline 
+                    style="width: 100%; border-radius: 15px; height: 100%; object-fit: cover;" 
+                    preload="metadata">
+                    <source src="img/publik (9).mp4" type="video/mp4">
+                    <source src="img/publik (9).webm" type="video/webm">
+                    Tu navegador no soporta el video HTML5.
+                    </video> 
                     <div class="card-body">
                       <h5 class="card-title bi-text-paragraph" style="color: rgb(255, 255, 255);"><b>Desarrollo Web</b></h5>
                       <p class="card-text" style="color: white;">
@@ -421,16 +487,12 @@
               regresar por más.
             </p>
 
-            
-
-            
-
           </article>
 
           <article class="col-12 col-lg-6 slide-up mb-5";>
 
             <img
-              class="img-fluid mt-3s " style="border-radius: 5%; margin-top: 100px; margin-bottom: 100px;"
+              class="img-fluid mt-0 mt-md-5 mb-md-3 mb-0" style="border-radius: 5%;"
               src="img/Diseño sin título (5).png"
               alt="¿Necesitas un increíble sitio web?"
             />
@@ -439,7 +501,7 @@
 
 
 
-          <article class="col-12 col-lg-5 order-lg-1 slide-up" style=" margin-bottom: 100px;">
+          <article class="col-12 col-lg-5 order-lg-1 slide-up mb-4">
 
             <h1>Colabora con Nosotros</h1>
             <p class="slide-up">
@@ -447,16 +509,19 @@
               metas y desafíos para crear estrategias visuales que impulsen tu negocio hacia nuevos horizontes.
             </p>
 
-            <button onclick="location.href='comencemos.html#single-pages'" class="btn btn-warning" style="color: rgb(0, 0, 0);">
-              <b>Preguntas Frecuentes</b>
-            </button>
+            <div class="center-mobile">
+              <button onclick="location.href='comencemos.html#single-pages'" class="btn btn-warning" style="color: rgb(0, 0, 0);">
+                <b>Preguntas Frecuentes</b>
+              </button>
+            </div>
+            
 
           </article>
 
-          <article class="col-12 col-lg-7 slide-up" style="margin-top: 0px; margin-bottom: 100px;">
+          <article class="col-12 col-lg-7 slide-up mt-0 ">
 
             <img
-              class="img-fluid mt-4" style="border-radius: 5%; width: 40rem;"
+              class="img-fluid mt-0" style="border-radius: 5%; width: 40rem;"
               src="img/Diseño sin título (6).png"
               alt="Sitios web responsivos"
             />
@@ -470,40 +535,94 @@
     <section class="pt-5 bg-black">
 
       <div class="container">
-        <section class="row text-white align-items-lg-center ">
+        <section class="row text-white align-items-lg-center py-4">
 
-          <article class="col-12 col-md-12 col-lg-12 d-flex justify-content-center slide-up" style="margin-bottom: 50px;">
+          <article class="col-12 col-md-12 col-lg-12 d-flex justify-content-center slide-up mb-2 mb-md-5">
 
-            <div class="text-center" style="margin-top: 25px; margin-bottom: 25px; ">
-                <h1 style="color: rgb(255, 255, 255);">Transformamos tus Ideas en Resultados Tangibles</h1>
+            <div class="text-center mt-md-3">
+                <h1 style="color: rgb(255, 255, 255);">Transformamos tus Ideas en <b>Resultados Tangibles</b></h1>
 
             </div>
 
-
-
-            
           </article>
           <article class="col-12 col-md-12 col-lg-12 d-flex justify-content-center slide-up"> 
             
             <div class="container">
               <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" style="height: fit-content;">
+            
                   <div class="carousel-item active" data-bs-interval="4000">
-                    <video src="img/publik (10).mp4" class="object-fit-contain w-100" style="width: 100%; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video class="object-fit-contain w-100"
+                           autoplay
+                           muted
+                           loop
+                           playsinline
+                           preload="metadata"
+                           style="width: 100%; height: 100%; object-fit: cover;">
+                      <source src="img/publik (10).mp4" type="video/mp4">
+                      <source src="img/publik (10).webm" type="video/webm">
+                      Tu navegador no soporta el video HTML5.
+                    </video>
                   </div>
+            
                   <div class="carousel-item" data-bs-interval="5400">
-                    <video src="img/publik (2).mp4" class="object-fit-contain w-100" style="width: 100%; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video class="object-fit-contain w-100"
+                           autoplay
+                           muted
+                           loop
+                           playsinline
+                           preload="metadata"
+                           style="width: 100%; height: 100%; object-fit: cover;">
+                      <source src="img/publik (2).mp4" type="video/mp4">
+                      <source src="img/publik (2).webm" type="video/webm">
+                      Tu navegador no soporta el video HTML5.
+                    </video>
                   </div>
+            
                   <div class="carousel-item" data-bs-interval="5500">
-                    <video src="img/publik (11).mp4" class="object-fit-contain w-100" style="width: 100%; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video class="object-fit-contain w-100"
+                           autoplay
+                           muted
+                           loop
+                           playsinline
+                           preload="metadata"
+                           style="width: 100%; height: 100%; object-fit: cover;">
+                      <source src="img/publik (11).mp4" type="video/mp4">
+                      <source src="img/publik (11).webm" type="video/webm">
+                      Tu navegador no soporta el video HTML5.
+                    </video>
                   </div>
+            
                   <div class="carousel-item" data-bs-interval="5500">
-                    <video src="img/publik (9).mp4" class="object-fit-contain w-100" style="width: 100%; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video class="object-fit-contain w-100"
+                           autoplay
+                           muted
+                           loop
+                           playsinline
+                           preload="metadata"
+                           style="width: 100%; height: 100%; object-fit: cover;">
+                      <source src="img/publik (9).mp4" type="video/mp4">
+                      <source src="img/publik (9).webm" type="video/webm">
+                      Tu navegador no soporta el video HTML5.
+                    </video>
                   </div>
+            
                   <div class="carousel-item" data-bs-interval="5400">
-                    <video src="img/publik (6).mp4" class="object-fit-contain w-100" style="width: 100%; height: 100%; object-fit: cover;" autoplay muted loop preload="metadata"></video>
+                    <video class="object-fit-contain w-100"
+                           autoplay
+                           muted
+                           loop
+                           playsinline
+                           preload="metadata"
+                           style="width: 100%; height: 100%; object-fit: cover;">
+                      <source src="img/publik (6).mp4" type="video/mp4">
+                      <source src="img/publik (6).webm" type="video/webm">
+                      Tu navegador no soporta el video HTML5.
+                    </video>
                   </div>
+            
                 </div>
+            
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -514,13 +633,14 @@
                 </button>
               </div>
             </div>
+            
 
           </article>
 
 
           <section class="row text-white align-items-lg-center mb-5">
-            <article class="col-12 col-lg-6 slide-up custom-article" style="margin-top: 65px;">
-              <h2>¡Comienza Ahora!</h2>
+            <article class="col-12 col-lg-6 slide-up custom-article mt-5">
+              <h2><b>¡Comienza Ahora!</b></h2>
               <p class="slide-up">
                 No hay tiempo como el presente para comenzar a dar forma a tu 
                 ideas. En <b>Publik</b>, cada día cuenta, y estamos listos para iniciar 
@@ -529,8 +649,8 @@
               <a class="btn btn-secondary btn-lg fw-bold btn-dark slide-up custom-bottom" href="comencemos.html">¡Comencemos!</a>
             </article>
             
-            <article class="col-12 col-lg-6 slide-up custom-article" style="margin-top: 80px; margin-bottom: 20px;">
-              <h2>Proyectos para Clientes</h2>
+            <article class="col-12 col-lg-6 slide-up custom-article mt-5">
+              <h2><b>Proyectos para Clientes</b></h2>
               <p class="slide-up">
                 En <b>Publik</b>, cada proyecto que realizamos refleja nuestro compromiso con la excelencia y la creatividad.  
                 Trabajamos de la mano con nuestros clientes para capturar <b>la esencia de sus marcas</b> y convertir ideas en resultados impactantes.  
@@ -542,8 +662,8 @@
               
             </article>
             
-            <article class="col-12 col-lg-6 slide-up custom-article" style="margin-top: 40px; margin-bottom: 25px;">
-              <h2>Nuevos Servicios</h2>
+            <article class="col-12 col-lg-6 slide-up custom-article mt-5">
+              <h2><b>Nuevos Servicios</b></h2>
               <p class="slide-up">  
                 <b>Impulsa tu marca</b> con las soluciones innovadoras de <b>Publik</b>.  
                 Descubre nuevos servicios y estrategias diseñados para destacar en el mercado.  
@@ -553,8 +673,8 @@
               <a class="btn btn-secondary btn-lg fw-bold btn-dark slide-up" href="sitios.html#single-page">Ver Servicios</a>
             </article>
             
-            <article class="col-12 col-lg-6 slide-up custom-article" style="margin-top: 50px; margin-bottom: 30px;">
-              <h2>Gestión Eficiente</h2>  
+            <article class="col-12 col-lg-6 slide-up custom-article mt-5">
+              <h2><b>Gestión Eficiente</b></h2>  
               <p class="slide-up">
                 Desde el desarrollo del concepto hasta la entrega final,  
                 nuestro enfoque <b>garantiza</b> que la propuesta de diseño, el desarrollo, el despliegue y cada detalle,  

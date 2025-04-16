@@ -493,7 +493,23 @@ margin-bottom: 75px;
   }
 }
 
+.wordcontainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
+.word-container-wrapper {
+  height:  50px;
+}
+
+@media (max-width: 768px) {
+  .center-mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
 @media (max-width: 767px) {
   .navbar-toggler {
     order: -1; /* Cambia el orden para que aparezca antes en dispositivos móviles */
@@ -541,7 +557,7 @@ margin-bottom: 75px;
 
 @media (max-width: 768px) {
   #wordContainer {
-      font-size: 30px; 
+      font-size: 30px;
   }
 }
 
@@ -591,3 +607,4 @@ section.img img:nth-child(26) {
       transform: translateY(0) scale(1);
   }
 }
+
